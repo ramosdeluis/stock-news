@@ -1,8 +1,10 @@
-STOCK = "TSLA"
-COMPANY_NAME = "Tesla Inc"
+from stock import Stock
 
-# STEP 1: Use https://www.alphavantage.co
-# When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
+stock = Stock()
+variation = stock.get_variation()
+
+if abs(variation) >= 5:
+    print('Variation bigger than 4%!')
 
 # STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
